@@ -1,0 +1,288 @@
+/*
+Paleta de colores
+#A60815, #BF0F30, #F2F2F2, #402319,#D0ADA0
+*********************************************
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+}
+
+.container_header{
+    width: 100%;
+    height:41%;
+    background: #402319;
+    background-image:linear-gradient(10deg,#4023198a,#A60815ab,#F2F2F225), url(../img/pexels-pixabay.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0.1px;
+}
+
+.menu{
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.menu a{
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+hr{
+    border-color: #4023197e;
+}
+
+.menu > li{
+    display: inline-block;
+    padding: 1.2% 2.2%;
+    background: #A60815;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    color: #F2F2F2;
+    font-size: 22px;
+}
+
+.menu >li:hover{
+    background-color: #BF0F30;
+    border: 2px solid #402319;
+}
+
+.menu .btn_contacto{
+    background-color: #BF0F30;
+    border: 3px solid #402319;
+}
+
+.title{
+    text-align: center;
+    font-size: 4em;
+    margin: 1%;
+    color:#F2F2F2;
+}
+
+.fm_contact{
+    width: 45%;
+    height: auto;
+    margin: 2% auto;
+    border: 5px solid #402319;
+    border-radius: 10px;
+    padding: 2% 1%;
+    text-align: center;
+}
+
+.fm_contact > hr{
+    margin-bottom: 3%;
+}
+
+.title_form{
+    margin: 2% 0;
+    text-align: center;
+    color: #A60815;
+}
+
+.fm_contact > input,label,button{
+    display: inline-block;
+    width: 80%;
+    margin: 1% 0;
+    font-size: 22px;
+}
+
+.fm_contact > input, .msn{
+    padding: 10px 2px;
+    border: none;
+    border-bottom: 2px solid #402319;
+    outline: none;
+    background-color: #fce3e371;
+}
+
+.select{
+    width: 30%;
+    border: none;
+    border-bottom: 2px solid #402319;
+    outline: none;
+    background-color: #FCE3E371;
+}
+
+#opOcup{
+    width: 80%;
+    height: auto;
+    font-size: 110%;
+    text-align: center;
+}
+
+.seleccionar{
+    background-color: lightgray;
+}
+
+.msn{
+    width: 80%;
+}
+
+.fm_contact > label{
+    text-align: left;
+    padding: 5px;
+}
+
+input:focus, .msn:focus{
+    border-bottom: none;
+    border-right: 2px solid #402319;
+    background-color: #1f1d1d25;
+}
+
+.btn_enviar, .btnRegistrar, .btnCancelar{
+    width: 30%;
+    margin-top: 3%;
+    padding: 10px 20px;
+    background: #A60815;
+    border-radius: 10px;
+    font-size: 20px;
+    border: solid #402319 2px;
+    color: #F2F2F2;
+}
+
+.btn_enviar:hover{
+    background-color: #BF0F30;
+    text-decoration: underline;
+}
+
+.footer{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;background-image: linear-gradient(10deg, 
+    #402319,#BF0F30,#A60815 60%);
+}
+
+.foot{
+    display: inline;
+    margin: 3%;
+    text-align: center;
+}
+.copy{
+    width: 30%;
+    height: auto;
+    color: #F2F2F2;
+    line-height: 40px;
+}
+
+.my_nets, .map{
+    width: 30%;
+    height: auto;
+}
+
+.title_about, .title_nets, .title_ubi {
+    color: #F2F2F2;
+    margin-bottom: 3%;
+    padding: 1%;
+}
+
+.social_net > li{
+    padding: 1%;
+}
+
+.nets{
+    width: 8%;
+}
+
+.foot > iframe{
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.credits{
+    width: 100vw;
+    padding: 2%;
+    background-color: #402319;
+    text-align: right;
+    color: #F2F2F2;
+}
+
+.credits > a{
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+.card{
+    width: 60%;
+    margin: 5% auto; 
+    border: 2px solid #402319;
+    background-color: #F2F2F2;
+    text-align: center;} 
+
+.title-card{
+    font-size: 24px;
+    padding: 2%; 
+} 
+
+.data-card, .text-mail, .text-msn{
+    font-size: 20px; 
+    color: #402319; 
+    padding: 1% 0;
+} 
+
+.text-telefono{ 
+    font-size: 22px;
+     padding: 2% 0; 
+} 
+
+.btnRegistrar:hover, .btnCancelar:hover{
+    background: #BF0F30; 
+    text-decoration:underline; 
+} 
+
+.alerta{ 
+    width: 30%;
+    height: auto;
+    background: #BF0F30;
+    position: fixed;
+    top: calc(100vh - 65%);
+    left: calc(100vw - 65%);
+    text-align: center;
+    border: 2px solid #402319;
+    padding: 5px;
+} 
+
+.textAlerta{
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    color: aliceblue;
+    font-size: 20px;
+}
+     
+.btnAlerta{
+    width: 40%;
+    height: auto;
+    margin-right: 1% ;
+    margin-bottom: 3%;
+    background: #402319; 
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #F2F2F2;
+    padding: 2%; 
+}
+
+/*Estilo de validacion*/
+
+.is-valid{
+    border-bottom: 2px solid green !important;
+}
+
+.is-invalid{
+    border-bottom: 2px solid red !important;
+}
