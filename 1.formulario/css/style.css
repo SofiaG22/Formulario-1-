@@ -98,7 +98,7 @@ hr{
 }
 
 .fm_contact > input, .msn{
-    padding: 10px 2px;
+    padding: 10px 20px;
     border: none;
     border-bottom: 2px solid #402319;
     outline: none;
@@ -113,7 +113,7 @@ hr{
     background-color: #FCE3E371;
 }
 
-#opOcup{
+.select{
     width: 80%;
     height: auto;
     font-size: 110%;
@@ -216,6 +216,9 @@ input:focus, .msn:focus{
     text-decoration: none;
 }
 
+.allCards > .cardsEstudiantes > .card > .data-card, .text-ocupacion{
+    font-size: 20px;
+}
 .card{
     width: 60%;
     margin: 5% auto; 
@@ -286,4 +289,120 @@ input:focus, .msn:focus{
 .is-invalid{
     border-bottom: 2px solid red !important;
 }
-/*holaaaaaaaa*/
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .menu > li {
+        font-size: 20px;
+    }
+    .title{
+        font-size: 3.5em;
+    }
+    .fm_contact{
+        width: 70%;
+    }
+    .container_header{
+        height: 28%;
+    }
+}
+@media (min-width: 680px) and (max-width: 768px) {
+    .menu{
+        padding: 3%; 
+     }    
+     .menu > li{
+        font-size: 18px;
+        margin-bottom: 1.5%; 
+     }
+     .title{
+        font-size:3.0em;
+        margin-top: 2.0%;
+     }
+     .fm_contact{
+        width: 75%;
+    }
+    .btn_enviar, .btnRegistrar, .btnCancelar{
+        width:35%;
+        margin-top: 2.0%;
+        padding: 8px 18px;
+        font-size: 18px;
+    }
+    .container_header{
+        height: 20%;
+    }
+}
+@media (min-width: 580px) and (max-width: 680px) {
+    .menu > li{
+        font-size: 15px;
+        margin-bottom: 1.5%; 
+        padding: 2%;
+     }
+     .title{
+        font-size:2.5em;
+        margin-top: 2.5%;
+     }
+     .fm_contact{
+        width: 80%;
+        height: auto;
+        margin: 2% auto;
+        border: 3.5px solid;
+        border-radius: 8px;
+    }
+    .fm_contact > input, label, button{
+        font-size: 20px;
+
+    }
+    .btn_enviar, .btnRegistrar, .btnCancelar{
+        width:40%;
+        margin-top: 2.0%;
+    }
+    .copy{
+        line-height: 25px;
+    }
+}
+@media (min-width: 300px) and (max-width: 580px) {
+    .title{
+        font-size:2.0em;
+        margin-top: 2.5%;
+     }
+     .menu{
+        text-align: right;
+        margin: 2%;
+     }
+    .menu > li{
+        display: block;
+        padding: 1%;
+        text-align: center;
+    }
+    .fm_contact{
+        width: 85%;
+        border: 3px solid;
+    }
+    .fm_contact > input, label, button{
+        font-size: 20px;
+
+    }
+    .btn_enviar, .btnRegistrar, .btnCancelar{
+        width:45%;
+        margin-top: 2.5%;
+    }
+    .container_header{
+        height: 25%;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+    }
+    .foot > iframe{
+        width: 90%;
+    }
+    .credits{
+        height: auto;
+        padding: 2%;
+    }
+    .copy{
+        line-height: 25px;
+    }
+}
+
+#templateDocentes{
+    background-color: brown;
+}

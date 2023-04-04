@@ -9,6 +9,13 @@ const validateTelefono = (cad) => {
 }
 
 class Validate{
+    validOcup(value){
+        const ocuRX = "estudiante";
+        const ocuRX1 = "docente";
+        const resp = value.match(ocuRX) || value.match(ocuRX1) ? true : false;
+        return resp; 
+    }   
+
     validNames(value){
         const nombresRX = /^([a-zA-ZÀ-ÖØ-öø-ÿ]{3,25})([\s]?)([a-zA-ZÀ-ÖØ-öø-ÿ]{0,25})$/g;
         const resp = value.match(nombresRX) ? true : false;
@@ -32,22 +39,12 @@ class Validate{
         const resp = value.match(teleRX) ? true : false;
         return resp;    
     }
-    validOcu(value){
-        const ocuRX = value;
-        const resp = value.match(ocuRX)? true : false;
-        return resp;
-    } 
 
     validMsn(value){
-        const msnRX = /^[\W.a-zA-ZÀ-ÖØ-öø-ÿ\s\d]{2,100}/;
+        const msnRX = /^([\W.a-zA-ZÀ-ÖØ-öø-ÿ\s\d]{5,80})/;
         const resp = value.match(msnRX)? true : false;
         return resp;
     }
 } 
 
 export { validateString, validateTelefono, Validate}
-
-
-// \w representa letrasmayúsculas y minúsculas de la A ala Z, números del 0 al 9 y guiones.
-
-// para marcar un punto es \. de lo contrario el solo punto . representa cualquier caracter.

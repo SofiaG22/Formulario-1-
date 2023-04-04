@@ -28,6 +28,12 @@
       <form id="fmContact" class="fm_contact">
         <h2 class="title_form">Llena el Formulario</h2>
         <hr />
+        <label for="ocupaciones">Ocupación: </label>
+        <select for="Ocup" name="Ocup" id="Ocup" class="select">
+          <option value="standard" class="seleccionar">-Seleccionar-</option>
+          <option value="estudiante" id="ocupacion">Estudiante</option>
+          <option value="docente" id="ocupacion">Docente</option>        
+        </select>
         <label for="name">Nombres:</label>
         <input type="text" id="name" />
         <label for="lastName">Apellidos:</label>
@@ -36,37 +42,40 @@
         <input type="email" id="mail" />
         <label for="telephone">Teléfono:</label>
         <input type="tel" id="telephone" />
-        <label for="ocupaciones">Ocupación: </label>
-        <select for="opOcup" name="opOcup" id="opOcup" class="select">
-          <option value="standard" class="seleccionar">-Seleccionar-</option>
-          <option value="Estudiante" id="ocupacion">Estudiante</option>
-          <option value="Docente" id="ocupacion">Docente</option>        
-        </select>
         <label for="msn">Déjanos tu mensaje</label>
         <textarea id="fm_contact" rows="8" cols="50" class="msn" placeholder="Escribe tu Mensaje" required>
-        </textarea
-        >
+        </textarea>
         <button class="btn_enviar" id="btnEnviar">Enviar Mensaje</button>
       </form>
     </section>
     <section class="allCards">
         <div class="cardsEstudiantes" id="cardsEstudiantes"></div>
-        <div class="" id="cardseProfesores">         
-        
-        </div>
+        <div class="" id="cardsDocentes"></div>
         <div class="" id="cardsAdministrativo"></div>
         
     </section>
     <template id="templateEstudiante">
-        <div class="card">
-          <h3 class="title-card"></h3>
-          <h4 class="data-card"></h4>
-          <p class="text-mail"></p>
-          <p class="text-telefono"></p>
-          <p class="text-ocupacion"></p>
-          <p class="text-msn"></p>      
-        </div>
+      <div class="card">
+        <h3 class="title-card"></h3>
+        <h4 class="data-card"></h4>
+        <p class="text-mail"></p>
+        <p class="text-telefono"></p>
+        <p class="text-ocupacion"></p>
+        <p class="text-msn"></p>    
+      </div>
+    </template> 
+
+    <template id="templateDocente">
+      <div class="card">
+        <h3 class="title-card"></h3>
+        <h4 class="data-card"></h4>
+        <p class="text-mail"></p>
+        <p class="text-telefono"></p>
+        <p class="text-ocupacion"></p>
+        <p class="text-msn"></p>   
+      </div>
     </template>  
+
     <footer class="footer">
       <div class="foot copy">
         <h3 class="title_about">Acerca de</h3>
@@ -95,8 +104,7 @@
       <a
         href="https://www.flaticon.es/iconos-gratis/gorjeo"
         title="gorjeo iconos"
-        >Gorjeo iconos creados por Pixel perfect - Flaticon</a
-      >
+        >Gorjeo iconos creados por Pixel perfect - Flaticon</a>
     </aside>    
    
     <script type="module" src="./dist/main.js"></script>

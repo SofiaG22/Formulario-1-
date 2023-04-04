@@ -4,17 +4,15 @@ import { addStudent, modalAlert } from "./paint.js";
 const btnEnviar = document.getElementById("btnEnviar");
 const form = document.getElementById("fmContact");
 
-// Instanciar el Objeto Validate
 let validator = new Validate();
 
-//Objeto de validación
 const objectValid = {
     nameObject: false,
     lastNameObject: false,
     mailObject: false,
     teleObject: false,
-    opOcupObject: false,
-    msnObject: true
+    ocupacionObject: false,
+    msnObject: false
 };
 
 form.addEventListener('change', function(event){
@@ -35,7 +33,7 @@ form.addEventListener('change', function(event){
     switch(inputId){
         case "name":
             objectValid.nameObject = validator.validNames(inputValue);
-            objectValid.nameObject ? validClass() : invalidClass(); //ternario
+            objectValid.nameObject ? validClass() : invalidClass(); 
             console.log(Object.values(objectValid));
             break;
         case "lastName":
@@ -53,14 +51,14 @@ form.addEventListener('change', function(event){
             objectValid.teleObject ? validClass() : invalidClass();
             console.log(Object.values(objectValid));
             break;
-        case "msn":
+        case "fm_contact":
             objectValid.msnObject = validator.validMsn(inputValue);    
             objectValid.msnObject ? validClass() : invalidClass();
             console.log(Object.values(objectValid));
             break;
-        case "opOcup":
-            objectValid.opOcupObject = validator.validOcu(inputValue);    
-            objectValid.opOcupObject ? validClass() : invalidClass();
+        case "Ocup":
+            objectValid.ocupacionObject = validator.validOcup(inputValue);    
+            objectValid.ocupacionObject ? validClass() : invalidClass();
             console.log(Object.values(objectValid));
             break; 
         }
@@ -72,19 +70,20 @@ btnEnviar.addEventListener('click', (e) =>{
     const apellido = document.getElementById('lastName').value;
     const correo = document.getElementById('mail').value;
     const telefono = document.getElementById('telephone').value;
-    const ocupacion = document.getElementById('opOcup').value;
-    const mensaje = document.getElementById('fm_contact').value;
+    const ocupacion = document.getElementById('Ocup').value;
+    const mensaje = document.getElementById('fm_contact').value; 
 
     if(validator.validForm(objectValid) === -1) {
-    addStudent(nombre, apellido, correo, telefono, ocupacion, mensaje);
+        const ocup = document.getElementById("ocupacion").value;
+        if(ocup === "estudiante"){
+            addStudent(nombre, apellido, correo, telefono, ocupacion, mensaje);
+            }else{
+                addDocente(nombre, apellido, correo, telefono, ocupacion, mensaje);
+            }
 
         }else{
-        modalAlert("Error, revise los datos");
-    }
-})
+            modalAlert("Error, revise los datos");
+        }
+    });
 
-//se añade el evento y la función
-
-//una vez agregados los vlores, limpiar los imput y hacer un template select para el tipo de persona, un card para profesores.
-
-//sveriguar otros eventos, on blur, on focus.
+    export{form};
